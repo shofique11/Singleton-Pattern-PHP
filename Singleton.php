@@ -17,10 +17,10 @@ class Singleton{
     // Static method to get the instance of the class
     public static function getInstance()
     {
-        if(self::$instance === null){
-            self::$instance = new Singleton();
+        if(static::$instance === null){
+            static::$instance = new Singleton();
         }
-        return self::$instance;
+        return static::$instance;
     }
     public function sayHello(){
         echo "Hello from singletons! \n";
